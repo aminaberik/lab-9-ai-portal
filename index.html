@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Portal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="images/logo.svg" alt="AI Portal Logo" />
+      </div>
+      <div class="nav-controls">
+        <img src="images/search.svg" alt="Search" class="icon" />
+        <img src="images/menu.svg" alt="Menu" class="icon" />
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>Guide to Generative AI in 2026</h1>
+      <button class="btn-primary">Read Digest</button>
+    </section>
+
+    <section class="models-section">
+      <h2>AI Models</h2>
+      <div class="cards-grid">
+        <div class="card">ChatGPT</div>
+        <div class="card">Midjourney</div>
+        <div class="card">Sora</div>
+      </div>
+    </section>
+
+    <section class="subscribe-section">
+      <h2>Stay Update</h2>
+      <form class="subscribe-form" onsubmit="event.preventDefault()">
+        <input type="email" placeholder="Your Email" required />
+        <button type="submit" class="btn-primary">Subscribe</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2026 AI Portal.</p>
+      <div class="theme-toggle" id="themeToggle">
+        <span>Dark</span>
+        <img src="images/theme-toggle.svg" alt="Toggle Theme" class="icon" />
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
