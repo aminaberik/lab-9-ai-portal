@@ -1,231 +1,57 @@
 <!doctype html>
-<html lang="ru" data-theme="light">
+<html lang="ru" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guide to Generative AI in 2026 | AI Information Portal</title>
+    <title>AI Portal</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- 1. HEADER / NAV COMPONENT -->
-    <header class="site-header">
-      <a href="#" class="logo">
-        <svg
-          class="logo-icon"
-          width="28"
-          height="28"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path
-            d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
-          />
-          <circle cx="12" cy="12" r="3" />
-        </svg>
-        <span>AI Portal</span>
-      </a>
-
-      <!-- Рубрикатор -->
-      <nav class="main-nav" id="mainNav">
-        <ul class="nav-list">
-          <li>
-            <a href="#neural-networks" class="nav-link">Neural Networks</a>
-          </li>
-          <li><a href="#articles" class="nav-link">Articles</a></li>
-          <li><a href="#trends" class="nav-link">Trends</a></li>
-        </ul>
-      </nav>
-
-      <!-- Модуль поиска -->
-      <div class="search-module">
-        <input
-          type="search"
-          class="search-input"
-          placeholder="Search AI tools..."
-          aria-label="Search"
-        />
-        <button class="search-btn" aria-label="Search Submit">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-        </button>
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <img src="images/logo.svg" alt="AI Portal Logo" />
       </div>
-
-      <!-- Кнопка Бургер-меню для мобильных -->
-      <button
-        class="burger-btn"
-        aria-label="Toggle navigation"
-        onclick="document.getElementById('mainNav').classList.toggle('active')"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="nav-controls">
+        <img src="images/search.svg" alt="Search" class="icon" />
+        <img src="images/menu.svg" alt="Menu" class="icon" />
+      </div>
     </header>
 
-    <main>
-      <!-- 2. HERO SECTION COMPONENT -->
-      <section class="hero-section">
-        <div class="hero-content">
-          <span class="hero-badge">Digest 2026</span>
-          <h1 class="hero-title">Guide to Generative AI in 2026</h1>
-          <p class="hero-description">
-            Discover state-of-the-art neural network architectures, industry
-            trends, and practical integration guides for modern developers and
-            creators.
-          </p>
-          <a href="#catalog" class="cta-button">Read the Digest</a>
-        </div>
-      </section>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Guide to Generative AI in 2026</h1>
+      <button class="btn-primary">Read Digest</button>
+    </section>
 
-      <!-- 3. GRID SECTION COMPONENT -->
-      <section class="grid-section" id="catalog">
-        <h2 class="section-title">Catalog of AI Models & Tools</h2>
-        <div class="catalog-grid">
-          <article class="ai-card">
-            <div class="card-header">
-              <div class="card-logo">GPT</div>
-              <h3 class="card-title">LLM Generators</h3>
-            </div>
-            <p class="card-body">
-              Advanced text generation models specializing in complex reasoning,
-              coding assistance, and multi-turn instruction following.
-            </p>
-            <div class="card-tags">
-              <span class="tag">NLP</span>
-              <span class="tag">Text</span>
-              <span class="tag">API</span>
-            </div>
-          </article>
+    <!-- AI Models Section -->
+    <section class="models-section">
+      <h2>AI Models</h2>
+      <div class="cards-grid">
+        <div class="card">ChatGPT</div>
+        <div class="card">Midjourney</div>
+        <div class="card">Sora</div>
+      </div>
+    </section>
 
-          <article class="ai-card">
-            <div class="card-header">
-              <div class="card-logo">DIFF</div>
-              <h3 class="card-title">Diffusion Vision</h3>
-            </div>
-            <p class="card-body">
-              High-fidelity generative image models capable of rendering
-              photorealistic visuals and complex vector artwork.
-            </p>
-            <div class="card-tags">
-              <span class="tag">Vision</span>
-              <span class="tag">Design</span>
-              <span class="tag">Media</span>
-            </div>
-          </article>
+    <!-- Stay Update Section -->
+    <section class="subscribe-section">
+      <h2>Stay Update</h2>
+      <form class="subscribe-form" onsubmit="event.preventDefault()">
+        <input type="email" placeholder="Your Email" required />
+        <button type="submit" class="btn-primary">Subscribe</button>
+      </form>
+    </section>
 
-          <article class="ai-card">
-            <div class="card-header">
-              <div class="card-logo">AUD</div>
-              <h3 class="card-title">Neural Audio Synthesizers</h3>
-            </div>
-            <p class="card-body">
-              Real-time voice cloning and music composition tools leveraging
-              transformer-based generative sound processing.
-            </p>
-            <div class="card-tags">
-              <span class="tag">Audio</span>
-              <span class="tag">Speech</span>
-              <span class="tag">Music</span>
-            </div>
-          </article>
-
-          <article class="ai-card">
-            <div class="card-header">
-              <div class="card-logo">CODE</div>
-              <h3 class="card-title">Code Intelligence</h3>
-            </div>
-            <p class="card-body">
-              Automated code completion, test generation, and refactoring
-              engines tailored for modern software engineering workflows.
-            </p>
-            <div class="card-tags">
-              <span class="tag">DevTools</span>
-              <span class="tag">IDE</span>
-              <span class="tag">Automation</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- 4. FEEDBACK FORM COMPONENT -->
-      <section class="feedback-section">
-        <div class="feedback-container">
-          <h2 class="form-title">Stay Updated with AI Tech</h2>
-          <p class="form-subtitle">
-            Subscribe to our weekly newsletter to receive curated research
-            papers and tool breakdowns.
-          </p>
-          <form class="subscribe-form" action="#" method="POST">
-            <div class="form-group">
-              <input
-                type="email"
-                id="userEmail"
-                name="email"
-                class="email-input"
-                placeholder="Your Email (e.g. name@domain.com)"
-                required
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-              />
-              <span class="validation-message"
-                >Please enter a valid email address.</span
-              >
-            </div>
-            <button type="submit" class="submit-btn">Subscribe</button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <!-- 5. FOOTER COMPONENT -->
-    <footer class="site-footer">
-      <div class="footer-content">
-        <p class="disclaimer">
-          &copy; 2026 Artificial Intelligence Information Portal. Educational
-          Project for IITU ICT6001 Course. All rights reserved.
-        </p>
-        <div class="footer-links">
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="repo-link"
-          >
-            Project GitHub Repository
-          </a>
-          <!-- Переключатель темы -->
-          <div class="theme-switch-wrapper">
-            <label class="theme-switch" for="themeToggle">
-              <input
-                type="checkbox"
-                id="themeToggle"
-                onchange="toggleTheme()"
-              />
-              <span class="slider"></span>
-            </label>
-            <span class="theme-label">Dark Theme</span>
-          </div>
-        </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2026 AI Portal.</p>
+      <div class="theme-toggle" id="themeToggle">
+        <span>Dark</span>
+        <img src="images/theme-toggle.svg" alt="Toggle Theme" class="icon" />
       </div>
     </footer>
 
-    <script>
-      function toggleTheme() {
-        const currentTheme =
-          document.documentElement.getAttribute("data-theme");
-        const newTheme = currentTheme === "dark" ? "light" : "dark";
-        document.documentElement.setAttribute("data-theme", newTheme);
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
